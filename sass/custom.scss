@@ -1,2 +1,44 @@
 /** Custom roles **/
+@mixin transition($t){
+  -webkit-transition: $t;
+     -moz-transition: $t;
+      -ms-transition: $t;
+       -o-transition: $t;
+          transition: $t;
+}
+
+/** explosion **/
+#explosion > .layer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 600px;
+}
+#explosion {
+	position:			relative;
+	width:				100%;
+	background:			transparent url(img/bg.jpg) no-repeat top center;
+	background-attachment:fixed;
+	height:				550px;
+	overflow:			hidden;
+}
+#extraclouds { background: transparent url(img/extraclouds.png) no-repeat center center; }
+#boom { background:	transparent url(img/boom.png) no-repeat center center; }
+#bits1 { background: transparent url(img/bits1.png) no-repeat center center; }
+#bits2 { background: transparent url(img/bits2.png) no-repeat center center; }
+#bits3 { background: transparent url(img/bits3.png) no-repeat center center; }
+
+/** FOOTER **/
+footer {
+  background: none repeat scroll 0 0 #101010;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 5%;
+  position: relative;
+  .right {
+  	text-align: right;
+  }
+}
 

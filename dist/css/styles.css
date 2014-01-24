@@ -212,6 +212,7 @@ table {
 
   @page {
     margin: 2cm .5cm; }
+
   p,
   h2,
   h3 {
@@ -254,7 +255,7 @@ table {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2339,6 +2340,7 @@ input[type="button"].btn-block {
   font-family: 'Glyphicons Halflings';
   src: url("../fonts/glyphicons-halflings-regular.eot");
   src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg"); }
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -4501,12 +4503,14 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
+
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }
 
   to {
     background-position: 0 0; } }
+
 .progress {
   height: 20px;
   margin-bottom: 20px;
@@ -5411,7 +5415,7 @@ button.close {
   text-indent: -999px;
   cursor: pointer;
   background-color: #000 \9;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid #ffffff;
   border-radius: 10px; }
 
@@ -5498,6 +5502,7 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
+
 .visible-xs,
 tr.visible-xs,
 th.visible-xs,
@@ -6249,5 +6254,44 @@ td.visible-print {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
 /** Custom roles **/
+/** explosion **/
+#explosion > .layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 600px; }
 
-/*# sourceMappingURL=styles.css.map */
+#explosion {
+  position: relative;
+  width: 100%;
+  background: transparent url(img/bg.jpg) no-repeat top center;
+  background-attachment: fixed;
+  height: 550px;
+  overflow: hidden; }
+
+#extraclouds {
+  background: transparent url(img/extraclouds.png) no-repeat center center; }
+
+#boom {
+  background: transparent url(img/boom.png) no-repeat center center; }
+
+#bits1 {
+  background: transparent url(img/bits1.png) no-repeat center center; }
+
+#bits2 {
+  background: transparent url(img/bits2.png) no-repeat center center; }
+
+#bits3 {
+  background: transparent url(img/bits3.png) no-repeat center center; }
+
+/** FOOTER **/
+footer {
+  background: none repeat scroll 0 0 #101010;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 5%;
+  position: relative; }
+  footer .right {
+    text-align: right; }
