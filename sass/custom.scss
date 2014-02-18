@@ -16,21 +16,21 @@
 }
 
 /** explosion **/
-#explosion > .layer {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 600px;
-}
 #explosion {
 	position: relative;
 	width: 100%;
   height: 550px;
   margin: 0;
-	background:	transparent url(img/bg.jpg) no-repeat center top;
+	background:	rgb(0, 0, 0) url(img/bg.jpg) no-repeat center top;
 	background-attachment:fixed;
 	overflow: hidden;
+}
+#explosion > .layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 600px;
 }
 #extraclouds { background: transparent url(img/extraclouds.png) no-repeat center center; }
 #boom { background:	transparent url(img/boom.png) no-repeat center center; }
@@ -99,6 +99,7 @@ footer {
 #kickstarter-brand span:nth-child(2) { color: #76CC1E; }
 
 #video-jumbotron {
+  margin-bottom: 0;
   text-align: justify;
 }
 #video {
@@ -116,4 +117,97 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/**  **/
+#pledges { 
+  width: 100%;
+  font-size: 10px;
+}
+#pledges-universe {
+  position: relative;
+  width: 100%;
+  height: 60em;
+  overflow: hidden;
+  background: transparent url('img/hrs-ultimate-bg.jpg') no-repeat;
+  background-position: center 0;
+}
+#pledges-universe .zone {
+  width: 100%;
+}
+#pledges-universe h1 {
+  margin: 0 auto 0.6em;
+  padding: 2em 0 0;
+  color: white; 
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+  font-size: 6em;
+  font-family: Georgia, Garamond, Times, serif;
+}
+#pledges-intro {
+  position: absolute; 
+  z-index: 100; 
+}
+#pledges-zone-1 {
+  position: absolute;
+  left: 0;
+  top: 32em;
+  width: 100%;
+  height: 8.8em;
+  background: transparent url('img/hrs-trees.gif') repeat-x;
+  background-size: 20.6em 8.8em;  
+  z-index: 1;
+}
+#pledges-zone-2 {
+  position: absolute;
+  left: 0;
+  top: 31em;
+  width: 100%;
+  height: 17.6em;
+  background: transparent url('img/hrs-trees.gif') repeat-x;
+  background-size: 51.2em 17.6em;  
+  z-index: 2;
+}
+#pledges-zone-ground {
+  position: absolute;
+  left: 0;
+  top: 48em;
+  width: 100%;
+  height: 20em;
+  background: transparent url('img/hrs-ground.jpg') repeat-x;
+  background-position: 0 -17.3em;
+  background-size: 40em 30em;
+  z-index: 10;
+}
+
+#hrs-placeholder {
+  height: 10000px;
+}
+
+.box-indicator {
+  width: 9em;
+  height: 9em;
+  margin: auto;
+  padding: 3em;
+  background: rgba(255, 255, 255, 0.5);
+  @include transition(all .2s);
+  @include transform(rotate(0deg));
+}
+.box-indicator:hover { 
+  background-color: rgba(200, 200, 200, 0.8);
+  cursor: pointer;
+  @include transform(rotate(-45deg));
+  div {
+    @include transform(rotate(270deg));    
+  }
+}
+.box-indicator > div {
+  width: 3em;
+  height: 3em;
+  background: transparent;
+  border-left: 0.2em solid black;
+  border-bottom: 0.2em solid black;
+  @include transform(rotate(315deg));
+  @include transition(all .2s);
 }

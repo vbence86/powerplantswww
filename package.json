@@ -1,0 +1,28 @@
+{
+  "name": "powerplantswww",
+  "version": "0.0.0",
+  "description": "Frontend for the PowerPlants kickstarter project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vbence86/powerplantswww"
+  },
+  "keywords": [
+    "powerplantswww"
+  ],
+  "author": "Bence Varga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbence86/powerplantswww/issues"
+  },
+  "homepage": "https://github.com/vbence86/powerplantswww",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
