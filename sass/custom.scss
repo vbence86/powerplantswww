@@ -133,21 +133,96 @@ footer {
   background-position: center 0;
 }
 #pledges-universe .zone {
+  position: absolute;
   width: 100%;
 }
-#pledges-universe h1 {
+#pledges-universe h1,
+#pledges-universe h2 {
   margin: 0 auto 0.6em;
   padding: 2em 0 0;
   color: white; 
   text-align: center;
   text-transform: uppercase;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
-  font-size: 6em;
   font-family: Georgia, Garamond, Times, serif;
+  .prize {
+    font-size: 1.35em;
+    color: indigo;
+  }
+}
+#pledges-universe h1 { font-size: 6em; }
+#pledges-universe h2 { font-size: 4em; }
+#pledges-universe p {
+  color: white; 
+  text-align: justify;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+  font-size: 2.0em;
+  font-family: Georgia, Garamond, Times, serif;
+}
+#pledges-universe a {
+  color: gray; 
 }
 #pledges-intro {
   position: absolute; 
-  z-index: 100; 
+  z-index: 300; 
+}
+.pledges-scene {
+  position: absolute;
+  top: -10em;
+  text-align: left;
+  z-index: 200;
+  opacity: 0;
+}
+.pledges-scene .pledges-details {
+  position: relative;
+  max-width: 60em;
+  margin: 5em auto;
+  padding: 3.5em;  
+  background: rgba(60, 60, 60, 0.45);  
+}
+.pledges-scene .pledges-details p:nth-child(2) { text-align: right !important; }
+#pledges-previous-button,
+#pledges-next-button {
+  position: absolute;
+  top: 12em;
+  width: 4.2em;
+  height: 4.2em;
+  margin: auto;
+  padding: 1.4em;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 99999;
+  @include transition(all .2s);
+  div {
+    width: 1.4em;
+    height: 1.4em;
+    background: transparent;
+    border-left: 0.1em solid black;
+    border-bottom: 0.1em solid black;
+  }
+}
+#pledges-previous-button:hover,
+#pledges-next-button:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    cursor: pointer;    
+}
+#pledges-next-button { 
+  right: 3em;
+  div { @include transform(rotate(225deg)); }
+}
+#pledges-previous-button { 
+  left: 3em; 
+  div { @include transform(rotate(45deg)); }
+}
+#pledges-zone-0 {
+  position: absolute;
+  left: 0;
+  top: 27em;
+  width: 100%;
+  height: 15em;
+  background: transparent url('img/hrs-rocks.png') repeat-x;
+  background-size: 40em 18em;
+  z-index: 0;
+  filter: blur(2em);
 }
 #pledges-zone-1 {
   position: absolute;
@@ -169,6 +244,17 @@ footer {
   background-size: 51.2em 17.6em;  
   z-index: 2;
 }
+#pledges-zone-3 {
+  position: absolute;
+  left: 0;
+  top: 31em;
+  width: 100%;
+  height: 30em;
+  background: transparent url('img/hrs-rocks.png') repeat-x;
+  background-size: 160em 75.7em;
+  z-index: 30;
+  filter: blur(2em);
+}
 #pledges-zone-ground {
   position: absolute;
   left: 0;
@@ -179,10 +265,6 @@ footer {
   background-position: 0 -17.3em;
   background-size: 40em 30em;
   z-index: 10;
-}
-
-#hrs-placeholder {
-  height: 10000px;
 }
 
 .box-indicator {
@@ -210,4 +292,15 @@ footer {
   border-bottom: 0.2em solid black;
   @include transform(rotate(315deg));
   @include transition(all .2s);
+}
+#hero {
+  position: absolute;
+  left: 5em;
+  top: 39em;
+  width: 12.8em;
+  height: 10em;
+  background: url('img/hero.png') no-repeat;
+  background-size: 12.8em 40em;
+  z-index: 20;
+  opacity: 1;
 }
