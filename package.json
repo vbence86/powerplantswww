@@ -1,6 +1,6 @@
 {
   "name": "powerplantswww",
-  "version": "0.0.0",
+  "version": "0.1.8",
   "description": "Frontend for the PowerPlants kickstarter project",
   "main": "index.html",
   "scripts": {

@@ -12,9 +12,22 @@ module.exports = function(grunt){
     },
     uglify: {
       dist: {
+        options: {
+          sourceMap: true
+        },
         files: {
           'dist/js/custom/custom.min.js': 'dist/js/custom/uncompressed/*.js'
         }
+      },
+      dev: {
+        options: {
+          compress: false,
+          beautify: true,
+          mangle: false
+        },
+        files: {
+          'dist/js/custom/custom.min.js': 'dist/js/custom/uncompressed/*.js'
+        }  
       }
     },
     watch: {
